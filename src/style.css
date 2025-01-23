@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+
+.active {
+    @apply border-b-2 py-2 text-blue-600 font-semibold;
+}
+
+.card {
+    @apply p-4 rounded-lg border border-gray-300 flex flex-col space-y-8;
+}
