@@ -1,5 +1,6 @@
 <template>
   <div class="min-h-screen w-full bg-gradient-to-b from-gray-100 to-gray-200">
+    <p class="text-2xl text-gray-500">←</p>
     <h1 class="p-2 text-4xl font-semibold text-blue-600 text-center flex items-center justify-center">
       <img src="../assets/atlas.png" alt="Atlas" width="50" class="inline-block rounded-full" />
       Atlas
