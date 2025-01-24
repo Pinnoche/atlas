@@ -35,13 +35,20 @@
           </h2>
           <div class="flex items-center space-x-4">
             <button
-              class="border border-gray-300 px-4 py-2 rounded-md font-semibold"
+              class="border border-gray-300 px-4 py-2 rounded-md font-semibold text-lg flex items-center space-x-2 cursor-pointer"
             >
+              <img
+                src="../assets/filter.png"
+                alt="Filter"
+                width="20"
+                class="inline-block mr-2"
+              />
               Filter
             </button>
             <button
-              class="bg-blue-600 px-4 py-2 rounded-md text-white font-semibold"
+              class="bg-blue-600 px-4 py-2 text-lg rounded-md text-white font-semibold flex items-center space-x-2 cursor-pointer"
             >
+            <img src="../assets/download.png" alt="Download" width="20" class="inline-block mr-2" />
               Download Report
             </button>
           </div>
@@ -172,8 +179,8 @@
                       class="absolute w-full h-full rounded-full"
                       style="
                         background: conic-gradient(
-                            #3b82f6 30% 80%,
-                            #f3f4f6 80% 10%
+                          #3b82f6 30% 80%,
+                          #f3f4f6 80% 10%
                         );
                       "
                     ></div>
@@ -312,7 +319,6 @@
 
           <!-- Side Section  -->
         </div>
-
       </div>
     </div>
   </Layout>
@@ -322,18 +328,5 @@
 import Layout from "../Layout/Layout.vue";
 export default {
   components: { Layout },
-  mounted() {
-    // Initialize charts using libraries like Chart.js or ApexCharts
-    this.initShelfLifeChart();
-    this.initStorageSpaceChart();
-  },
-  methods: {
-    initShelfLifeChart() {
-      // Add Chart.js or similar library logic
-    },
-    initStorageSpaceChart() {
-      // Add Chart.js or similar library logic
-    },
-  },
 };
 </script>

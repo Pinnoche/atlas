@@ -1,6 +1,9 @@
 <template>
   <div class="min-h-screen w-full bg-gradient-to-b from-gray-100 to-gray-200">
-    <h1 class="text-2xl font-semibold text-blue-600 text-center">Atlas</h1>
+    <h1 class="p-2 text-4xl font-semibold text-blue-600 text-center flex items-center justify-center">
+      <img src="../assets/atlas.png" alt="Atlas" width="50" class="inline-block rounded-full" />
+      Atlas
+    </h1>
     <div class="flex justify-center items-center h-screen">
       <div class="w-full max-w-lg bg-white rounded-lg shadow-md p-6 my-auto">
         <p class="text-gray-500 font-semibold mt-1">PROCUREMENT</p>
