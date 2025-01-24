@@ -2,7 +2,7 @@
 
 
 .active {
-    @apply border-b-2 py-2 text-blue-600 font-semibold;
+    @apply border-b-2 border-b-blue-600 text-blue-600 pb-4;
 }
 
 .card {

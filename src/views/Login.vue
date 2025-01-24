@@ -1,10 +1,21 @@
 <template>
   <div class="min-h-screen w-full bg-gradient-to-b from-gray-100 to-gray-200">
-    <p class="text-2xl text-gray-500">←</p>
-    <h1 class="p-2 text-4xl font-semibold text-blue-600 text-center flex items-center justify-center">
-      <img src="../assets/atlas.png" alt="Atlas" width="50" class="inline-block rounded-full" />
-      Atlas
-    </h1>
+    <div class="w-full flex items-center p-4">
+      <img src="../assets/back.png" alt="back" width="20" class="cursor-pointer" />
+      <div class="flex-grow">
+        <h1
+          class="text-4xl font-semibold text-blue-600 text-center flex items-center justify-center cursor-default"
+        >
+          <img
+            src="../assets/atlas.png"
+            alt="Atlas"
+            width="50"
+            class="inline-block rounded-full"
+          />
+          Atlas
+        </h1>
+      </div>
+    </div>
     <div class="flex justify-center items-center h-screen">
       <div class="w-full max-w-lg bg-white rounded-lg shadow-md p-6 my-auto">
         <p class="text-gray-500 font-semibold mt-1">PROCUREMENT</p>
@@ -20,8 +31,12 @@
             <div class="relative w-full">
               <p
                 class="absolute inset-y-0 left-2 flex items-center space-x-2 text-gray-500"
-                ><span><img src="../assets/flag.png" alt="NGN" width="20"></span> <span>+234|</span></p
               >
+                <span
+                  ><img src="../assets/flag.png" alt="NGN" width="20"
+                /></span>
+                <span>+234|</span>
+              </p>
               <input
                 type="text"
                 id="phone"
@@ -54,7 +69,7 @@
                 class="absolute inset-y-0 right-2 flex items-center text-gray-500 cursor-pointer"
                 @click="togglePasswordVisibility()"
               >
-                <img src="../assets/visibility_off.svg" alt="visiblity_off">
+                <img src="../assets/visibility_off.svg" alt="visiblity_off" />
               </button>
               <button
                 v-else
@@ -62,9 +77,8 @@
                 class="absolute inset-y-0 right-2 flex items-center text-gray-500 cursor-pointer"
                 @click="togglePasswordVisibility()"
               >
-                <img src="../assets/visibility_onn.svg" alt="visiblity_on">
+                <img src="../assets/visibility_onn.svg" alt="visiblity_on" />
               </button>
-              
             </div>
           </div>
 

@@ -1,40 +1,30 @@
 <template>
   <Layout>
-    <div class="min-h-screen bg-white">
+    <div class="w-full min-h-screen bg-white py-2">
       <!-- Dashboard Content -->
-      <div class="container mx-auto p-6">
-        <!-- Header -->
-        <div
-          class="w-full flex items-center space-x-8 [&>p]:font-semibold [&>p]:cursor-pointer mb-8 border-b border-gray-300"
-        >
-          <RouterLink to="/" exact-active-class="active">
-            <p class="">Dashboard</p>
-          </RouterLink>
-          <RouterLink to="/404" exact-active-class="active">
-            <p class="">All Suppliers</p>
-          </RouterLink>
-          <RouterLink to="/404" exact-active-class="active">
-            <p class="">Purchase order</p>
-          </RouterLink>
-          <RouterLink to="/404" exact-active-class="active">
-            <p class="">Payments</p>
-          </RouterLink>
-          <RouterLink to="/404" exact-active-class="active">
-            <p class="">Supplier's return</p>
-          </RouterLink>
-          <RouterLink to="/404" exact-active-class="active">
-            <p class="">Product request</p>
+      <!-- Header -->
+      <div
+        class="w-full px-6 flex items-center gap-8 my-6 border-b border-b-gray-300 pb-4"
+      >
+        <div v-for="(header, index) in headers" :key="header.id">
+          <RouterLink
+            :to="header.link"
+            exact-active-class="active"
+            class="font-semibold text-gray-500 cursor-pointer hover:text-blue-600"
+          >
+            {{ header.name }}
           </RouterLink>
         </div>
-        <!-- Header -->
+      </div>
+      <!-- Header -->
+      <div class="container p-6">
 
         <!-- Download and Filter Section -->
         <div class="flex items-center justify-between mb-8">
-          
-            <h2 class="uppercase text-2xl font-semibold text-gray-800">
-              Procurement Dashboard
-            </h2>
-         
+          <h2 class="uppercase text-2xl font-semibold text-gray-800">
+            Procurement Dashboard
+          </h2>
+
           <div class="flex items-center space-x-4">
             <button
               class="border border-gray-300 px-4 py-2 rounded-md font-semibold text-lg flex items-center space-x-2 cursor-pointer"
@@ -65,63 +55,23 @@
           <!-- Stats Cards -->
           <div class="w-full col-span-9">
             <div class="grid grid-cols-3 gap-4 mb-8">
-              <div class="card">
-                <h3 class="text-gray-500">Received Suppliers</h3>
-                <div class="space-y-4">
-                  <p class="text-2xl font-semibold text-gray-600">60</p>
-                  <p class="text-sm text-gray-600">
-                    <span
-                      class="px-4 py-1 bg-green-300 text-green-700 font-bold rounded-sm text-base"
-                      >↑ 12.96%</span
-                    >
-                    Compared to last month
-                  </p>
+              <div v-for="card in cards" :key="card.id">
+                <div class="card">
+                  <h3 class="text-gray-500">{{ card.title }}</h3>
+                  <div class="space-y-4">
+                    <p class="text-xl font-semibold text-gray-600">
+                      {{ card.value }}
+                    </p>
+                    <p class="text-sm text-gray-600">
+                      <span
+                        class="px-4 py-1 font-bold rounded-sm text-base"
+                        :class="card.color"
+                        >{{ card.percentage }}</span
+                      >
+                      {{ card.compared }}
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div class="card">
-                <h3 class="text-gray-500">Received Products Qty</h3>
-                <div class="space-y-4">
-                  <p class="text-2xl font-semibold text-gray-600">20,550</p>
-                  <p class="text-sm text-gray-600">
-                    <span
-                      class="px-4 py-1 bg-red-300 text-red-700 font-bold rounded-sm text-base"
-                      >↑ 2.96%</span
-                    >
-                    Compared to last month
-                  </p>
-                </div>
-              </div>
-              <div class="card">
-                <h3 class="text-gray-500">Value of Received Products</h3>
-                <div class="space-y-4">
-                  <p class="text-2xl font-semibold text-gray-600">₦5,250,000</p>
-                  <p class="text-sm text-gray-600">
-                    <span
-                      class="px-4 py-1 bg-gray-300 text-gray-700 font-bold rounded-sm text-base"
-                      >— 12.96%</span
-                    >
-                    Compared to last month
-                  </p>
-                </div>
-              </div>
-              <div class="card">
-                <h3 class="text-gray-500">Orders Pending Arrival</h3>
-
-                <p class="text-2xl font-semibold text-gray-600 mb-8">15</p>
-              </div>
-              <div class="card">
-                <h3 class="text-gray-500">Orders Passed Delivery Date</h3>
-
-                <p class="text-2xl font-semibold text-gray-600 mb-8">10</p>
-              </div>
-              <div class="card">
-                <h3 class="text-gray-500">Average Processing Time</h3>
-
-                <p
-                  class="text-xl whitespace-nowrap font-semibold text-gray-600 mb-8"
-                >
-                  06 Days | 14 Hours | 53 Minutes
-                </p>
               </div>
             </div>
             <div class="grid grid-cols-2 gap-4">
@@ -166,8 +116,8 @@
                 <div
                   class="flex items-center justify-center space-x-4 [&>p]:text-sm [&>p]:text-gray-500 [&>p]:font-semibold"
                 >
-                  <p>Less than 18 Months</p>
-                  <p>More than 18 Months</p>
+                  <p class="flex items-center gap-2"><span class="w-2 h-2 flex bg-[#3b82f6] rounded-full"></span>Less than 18 Months</p>
+                  <p class="flex items-center gap-2"><span class="w-2 h-2 flex bg-[#a3e635] rounded-full"></span>More than 18 Months</p>
                 </div>
               </div>
               <div class="px-4 py-6 rounded-lg border border-gray-300">
@@ -205,8 +155,8 @@
                 <div
                   class="flex items-center justify-center space-x-4 [&>p]:text-sm [&>p]:text-gray-500 [&>p]:font-semibold"
                 >
-                  <p>Used Space</p>
-                  <p>Free Space</p>
+                  <p class="flex items-center gap-2"><span class="w-2 h-2 flex bg-[#3b82f6] rounded-full"></span>Used Space</p>
+                  <p class="flex items-center gap-2"><span class="w-2 h-2 flex bg-[#f3f4f6] rounded-full"></span>Free Space</p>
                 </div>
               </div>
             </div>
@@ -335,5 +285,67 @@
 import Layout from "../Layout/Layout.vue";
 export default {
   components: { Layout },
+  data() {
+    return {
+      headers: [
+        { id: 1, name: "Dashboard", link: "/" },
+        { id: 2, name: "All Suppliers", link: "/404" },
+        { id: 3, name: "Purchase order", link: "/404" },
+        { id: 4, name: "Payments", link: "/404" },
+        { id: 5, name: "Supplier's return", link: "/404" },
+        { id: 6, name: "Product request", link: "/404" },
+      ],
+      cards: [
+        {
+          id: 1,
+          title: "Received Suppliers",
+          value: "60",
+          percentage: "↑ 12.96%",
+          compared: "Compared to last month",
+          color: "bg-green-300 text-green-700",
+        },
+        {
+          id: 2,
+          title: "Received Products Qty",
+          value: "20,550",
+          percentage: "↑ 2.96%",
+          compared: "Compared to last month",
+          color: "bg-red-300 text-red-700",
+        },
+        {
+          id: 3,
+          title: "Value of Received Products",
+          value: "₦5,250,000",
+          percentage: "— 12.96%",
+          compared: "Compared to last month",
+          color: "bg-gray-300 text-gray-700",
+        },
+        {
+          id: 4,
+          title: "Orders Pending Arrival",
+          value: "15",
+          percentage: "",
+          compared: "",
+          color: "",
+        },
+        {
+          id: 5,
+          title: "Orders Passed Delivery Date",
+          value: "10",
+          percentage: "",
+          compared: "",
+          color: "",
+        },
+        {
+          id: 6,
+          title: "Average Processing Time",
+          value: "06 Days | 14 Hours | 53 Minutes",
+          percentage: "",
+          compared: "",
+          color: "",
+        },
+      ],
+    };
+  },
 };
 </script>
