@@ -10,24 +10,24 @@
           <RouterLink
             :to="header.link"
             exact-active-class="active"
-            class="font-semibold text-gray-500 cursor-pointer hover:text-blue-600"
+            class="font-semibold text-xs sm:text-base whitespace-nowrap text-gray-500 cursor-pointer hover:text-blue-600"
           >
             {{ header.name }}
           </RouterLink>
         </div>
       </div>
       <!-- Header -->
-      <div class="container p-6">
+      <div class="container w-full p-6">
 
         <!-- Download and Filter Section -->
         <div class="flex items-center justify-between mb-8">
-          <h2 class="uppercase text-2xl font-semibold text-gray-800">
+          <h2 class="uppercase text-sm sm:text-2xl font-semibold text-gray-800">
             Procurement Dashboard
           </h2>
 
           <div class="flex items-center space-x-4">
             <button
-              class="border border-gray-300 px-4 py-2 rounded-md font-semibold text-lg flex items-center space-x-2 cursor-pointer"
+              class="border border-gray-300 hover:border-gray-400 px-2 py-1 sm:px-4 sm:py-2 rounded-md font-semibold text-sm sm:text-lg flex items-center space-x-2 cursor-pointer"
             >
               <img
                 src="../assets/filter.png"
@@ -38,7 +38,7 @@
               Filter
             </button>
             <button
-              class="bg-blue-600 px-4 py-2 text-lg rounded-md text-white font-semibold flex items-center space-x-2 cursor-pointer"
+              class="bg-blue-600 hover:bg-blue-700 px-8 py-1 text-xs whitespace-nowrap sm:px-4 sm:py-2 sm:text-lg rounded-md text-white font-semibold flex items-center space-x-2 cursor-pointer"
             >
               <img
                 src="../assets/download.png"
@@ -51,10 +51,10 @@
           </div>
         </div>
         <!-- Download and Filter Section -->
-        <div class="w-full grid grid-cols-12 gap-4">
+        <div class="w-full grid grid-cols-1 sm:grid-cols-12 gap-4">
           <!-- Stats Cards -->
-          <div class="w-full col-span-9">
-            <div class="grid grid-cols-3 gap-4 mb-8">
+          <div class="w-full sm:col-span-9">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8">
               <div v-for="card in cards" :key="card.id">
                 <div class="card">
                   <h3 class="text-gray-500">{{ card.title }}</h3>
@@ -74,7 +74,7 @@
                 </div>
               </div>
             </div>
-            <div class="grid grid-cols-2 gap-4">
+            <div class="sm:grid grid-cols-2 gap-4">
               <div class="px-4 py-6 rounded-lg border border-gray-300">
                 <h3 class="text-lg font-semibold text-gray-700 mb-2">
                   Shelf Life Analysis
@@ -165,7 +165,7 @@
 
           <!-- Side Section  -->
           <div
-            class="col-span-3 w-full h-[90%] overflow-y-scroll p-4 border border-gray-300 rounded-md"
+            class="sm:col-span-3 w-full h-[90%] overflow-y-scroll p-4 border border-gray-300 rounded-md"
           >
             <div class="pb-6 border-b border-gray-300">
               <h2 class="top-0 text-lg font-semibold text-gray-700 mb-4">
@@ -289,7 +289,7 @@ export default {
     return {
       headers: [
         { id: 1, name: "Dashboard", link: "/" },
-        { id: 2, name: "All Suppliers", link: "/404" },
+        { id: 2, name: "All Suppliers", link: "/supplier" },
         { id: 3, name: "Purchase order", link: "/404" },
         { id: 4, name: "Payments", link: "/404" },
         { id: 5, name: "Supplier's return", link: "/404" },
