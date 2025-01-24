@@ -1,7 +1,7 @@
 <template>
   <!-- Navigation Bar -->
   <nav class="bg-white border-b border-gray-300">
-    <div class="container flex items-center justify-between p-6">
+    <div class="w-full flex items-center justify-between p-6">
       <div class="flex items-center justify-center space-x-6">
         <img
           src="../assets/menu.png"

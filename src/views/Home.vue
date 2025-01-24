@@ -17,7 +17,7 @@
       </div>
 
       <!-- Dashboard Main Section -->
-      <div class="container w-full px-4 sm:px-6 py-4">
+      <div class="w-full px-4 sm:px-6 py-4">
         <!-- Download and Filter Section -->
         <div class="flex flex-wrap items-center justify-between mb-8 gap-4">
           <h2 class="uppercase text-sm sm:text-xl md:text-2xl font-semibold text-gray-800">
