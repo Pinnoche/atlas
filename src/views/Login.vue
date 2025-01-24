@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen w-full bg-gradient-to-b from-gray-100 to-gray-200">
-    <div class="w-full flex items-center p-4">
+    <div class="w-full flex items-center p-4 sm:px-6 md:px-8">
       <img src="../assets/back.png" alt="back" width="20" class="cursor-pointer" />
       <div class="flex-grow">
         <h1
@@ -16,10 +16,10 @@
         </h1>
       </div>
     </div>
-    <div class="flex justify-center items-center h-screen">
-      <div class="w-full max-w-lg bg-white rounded-lg shadow-md p-6 my-auto">
+    <div class="flex justify-center items-center min-h-[80vh] py-6 px-4">
+      <div class="w-full max-w-md bg-white rounded-lg p-6 sm:p-8">
         <p class="text-gray-500 font-semibold mt-1">PROCUREMENT</p>
-        <h2 class="text-3xl font-semibold text-gray-700 my-2">
+        <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-700 my-2">
           Sign in to your account
         </h2>
         <form class="mt-6 space-y-4">
