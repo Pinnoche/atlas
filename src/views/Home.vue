@@ -1,11 +1,11 @@
 <template>
   <Layout>
-    <div class="min-h-screen bg-gray-100">
+    <div class="min-h-screen bg-white">
       <!-- Dashboard Content -->
       <div class="container mx-auto p-6">
         <!-- Header -->
         <div
-          class="flex items-center space-x-8 [&>p]:font-semibold [&>p]:cursor-pointer my-4"
+          class="w-full flex items-center space-x-8 [&>p]:font-semibold [&>p]:cursor-pointer mb-8 border-b border-gray-300"
         >
           <RouterLink to="/" exact-active-class="active">
             <p class="">Dashboard</p>
@@ -30,9 +30,11 @@
 
         <!-- Download and Filter Section -->
         <div class="flex items-center justify-between mb-8">
-          <h2 class="uppercase text-2xl font-semibold text-gray-800 mb-6">
-            Procurement Dashboard
-          </h2>
+          
+            <h2 class="uppercase text-2xl font-semibold text-gray-800">
+              Procurement Dashboard
+            </h2>
+         
           <div class="flex items-center space-x-4">
             <button
               class="border border-gray-300 px-4 py-2 rounded-md font-semibold text-lg flex items-center space-x-2 cursor-pointer"
@@ -48,7 +50,12 @@
             <button
               class="bg-blue-600 px-4 py-2 text-lg rounded-md text-white font-semibold flex items-center space-x-2 cursor-pointer"
             >
-            <img src="../assets/download.png" alt="Download" width="20" class="inline-block mr-2" />
+              <img
+                src="../assets/download.png"
+                alt="Download"
+                width="20"
+                class="inline-block mr-2"
+              />
               Download Report
             </button>
           </div>
