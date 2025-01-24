@@ -143,7 +143,7 @@
           </div>
 
           <!-- Side Section -->
-          <div class="w-full md:col-span-3 p-4 border border-gray-300 rounded-lg overflow-y-auto max-h-screen">
+          <div class="w-full h-[93.5%] md:col-span-3 p-4 border border-gray-300 rounded-lg overflow-y-auto max-h-screen">
             <!-- Top Suppliers -->
             <div class="pb-6 border-b border-gray-300">
               <h3 class="text-lg font-semibold text-gray-700 mb-4">
