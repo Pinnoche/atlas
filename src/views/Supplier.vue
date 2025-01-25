@@ -3,11 +3,16 @@
     <div
       class="w-full flex flex-wrap items-center justify-between space-x-4 sm:space-x-0 bg-white px-6 py-3 border-t border-gray-50"
     >
-      <button class="w-full sm:w-0 flex items-center text-gray-600 text-lg">
+      <button
+        @click="navigateTo('/')"
+        class="w-full sm:w-0 flex items-center text-gray-600 text-lg cursor-pointer"
+      >
         <i class="bx bx-chevron-left text-2xl"></i>
         Back
       </button>
-      <h1 class="text-sm sm:text-lg font-semibold whitespace-nowrap text-gray-700 flex-1 sm:flex-none">
+      <h1
+        class="text-sm sm:text-lg font-semibold whitespace-nowrap text-gray-700 flex-1 sm:flex-none"
+      >
         SUPPLIER'S DASHBOARD
       </h1>
       <div class="flex items-center space-x-3">
@@ -72,12 +77,11 @@
       </div>
     </div>
 
-    
     <div
       class="w-[60%] flex flex-wrap items-center justify-center sm:flex-nowrap space-x-16 p-6 font-medium mx-6 bg-white rounded-md mb-6 border border-gray-300"
     >
       <div class="w-full sm:border-r border-gray-300 whitespace-pre">
-        <p class="text-gray-500 font-medium mb-3 ">
+        <p class="text-gray-500 font-medium mb-3">
           Purchase Order
           <span
             class="font-bold text-sm text-gray-700 mx-4 p-1 rounded-md bg-gray-100"
@@ -88,7 +92,7 @@
         <p class="font-bold text-lg text-gray-600">₦5,250,000</p>
       </div>
       <div class="w-full sm:border-r border-gray-300 whitespace-pre">
-        <p class="text-gray-500 font-medium  mb-3 ">
+        <p class="text-gray-500 font-medium mb-3">
           Invoices
           <span
             class="font-bold text-sm text-gray-700 mx-4 p-1 rounded-md bg-gray-100"
@@ -106,7 +110,7 @@
             >25</span
           >
         </p>
-        
+
         <p class="font-bold text-lg text-gray-600">₦5,250,000</p>
       </div>
       <div class="w-full sm:border-r border-gray-300 whitespace-pre">
@@ -118,7 +122,6 @@
         <p class="font-bold text-lg text-gray-600">0</p>
       </div>
     </div>
-
 
     <div class="border-gray-200 mx-6">
       <div class="flex space-x-4" aria-label="Tabs">
@@ -136,7 +139,11 @@
         <div
           class="flex items-center rounded-md px-3 font-medium bg-gray-200 py-1"
         >
-          <label for="page-select" class="mr-2 text-sm sm:text-base text-gray-700">Page</label>
+          <label
+            for="page-select"
+            class="mr-2 text-sm sm:text-base text-gray-700"
+            >Page</label
+          >
           <select id="page-select" class="text-sm sm:text-base text-gray-700">
             <option>1/6</option>
           </select>
@@ -169,9 +176,7 @@
     </div>
 
     <div class="w-full bg-white px-6 pb-8 overflow-x-auto">
-      <div
-        class="rounded-xl border border-gray-300 overflow-hidden"
-      >
+      <div class="rounded-xl border border-gray-300 overflow-hidden">
         <table class="min-w-full table-auto">
           <!-- Table Head -->
           <thead>
@@ -390,9 +395,20 @@
 
 <script>
 import Layout from "../Layout/Layout.vue";
+import { useRouter } from "vue-router";
 
 export default {
   components: { Layout },
   name: "Supplier",
+  setup() {
+    const router = useRouter();
+    return { router };
+  },
+  methods: {
+    navigateTo(route) {
+        console.log("back");
+        this.router.push(route);
+    },
+  },
 };
 </script>
