@@ -78,9 +78,9 @@
     </div>
 
     <div
-      class="w-[60%] flex flex-wrap items-center justify-center sm:flex-nowrap space-x-16 p-6 font-medium mx-6 bg-white rounded-md mb-6 border border-gray-300"
+      class="w-[60%] grid grid-cols-1 sm:grid-cols-5 gap-4 items-center justify-center p-6 font-medium mx-6 bg-white rounded-md mb-6 border border-gray-300"
     >
-      <div class="w-full sm:border-r border-gray-300 whitespace-pre">
+      <div class="w-full border-b sm:border-b-0 sm:border-r border-gray-300 whitespace-nowrap">
         <p class="text-gray-500 font-medium mb-3">
           Purchase Order
           <span
@@ -91,7 +91,7 @@
 
         <p class="font-bold text-lg text-gray-600">₦5,250,000</p>
       </div>
-      <div class="w-full sm:border-r border-gray-300 whitespace-pre">
+      <div class="w-full border-b sm:border-b-0 sm:border-r border-gray-300 whitespace-nowrap">
         <p class="text-gray-500 font-medium mb-3">
           Invoices
           <span
@@ -102,7 +102,7 @@
 
         <p class="font-bold text-lg text-gray-600">₦5,250,000</p>
       </div>
-      <div class="w-full sm:border-r border-gray-300 whitespace-pre">
+      <div class="w-full border-b sm:border-b-0 sm:border-r border-gray-300 whitespace-nowrap">
         <p class="text-gray-500 font-medium mb-3">
           Payments
           <span
@@ -113,7 +113,7 @@
 
         <p class="font-bold text-lg text-gray-600">₦5,250,000</p>
       </div>
-      <div class="w-full sm:border-r border-gray-300 whitespace-pre">
+      <div class="w-full border-b sm:border-b-0 sm:border-r border-gray-300 whitespace-nowrap">
         <p class="text-gray-500 font-medium mb-3">Purchase Qty</p>
         <p class="font-bold text-lg text-gray-600">12</p>
       </div>
@@ -180,31 +180,31 @@
         <table class="min-w-full table-auto">
           <!-- Table Head -->
           <thead>
-            <tr class="bg-gray-50 text-left text-gray-600 font-semibold">
-              <th class="px-4 py-2">Order No</th>
-              <th class="px-4 py-2">Supplier's Name</th>
-              <th class="px-4 py-2">Type</th>
-              <th class="px-4 py-2">Date</th>
-              <th class="px-4 py-2">Total</th>
-              <th class="px-4 py-2">Quantity</th>
-              <th class="px-4 py-2">Quantity Returned</th>
-              <th class="px-4 py-2">Status</th>
-              <th class="px-4 py-2">Action</th>
+            <tr class="bg-gray-50 text-left text-gray-600 font-semibold [&>th]:px-4 [&>th]:py-2">
+              <th>Order No</th>
+              <th>Supplier's Name</th>
+              <th>Type</th>
+              <th>Date</th>
+              <th>Total</th>
+              <th>Quantity</th>
+              <th>Quantity Returned</th>
+              <th>Status</th>
+              <th>Action</th>
             </tr>
           </thead>
 
           <!-- Table Body -->
           <tbody class="text-gray-800">
             <!-- Table Row -->
-            <tr class="border-t bg-gray-100 border-gray-300 hover:bg-gray-50">
-              <td class="px-4 py-2">RHPO-1651244214</td>
-              <td class="px-4 py-2">Fidson Healthcare</td>
-              <td class="px-4 py-2">Trade</td>
-              <td class="px-4 py-2">5/21/2024</td>
-              <td class="px-4 py-2">₦2,055,043.00</td>
-              <td class="px-4 py-2">93</td>
-              <td class="px-4 py-2">1</td>
-              <td class="px-4 py-2">
+            <tr class="border-t bg-gray-100 border-gray-300 hover:bg-gray-50 [&>td]:py-2 [&>td]:px-4">
+              <td>RHPO-1651244214</td>
+              <td>Fidson Healthcare</td>
+              <td>Trade</td>
+              <td>5/21/2024</td>
+              <td>₦2,055,043.00</td>
+              <td>93</td>
+              <td>1</td>
+              <td>
                 <span
                   class="bg-green-100 text-green-800 text-sm font-medium px-2 py-1 rounded"
                 >
@@ -239,148 +239,154 @@
                 </button>
               </td>
             </tr>
-            <tr class="border-t bg-white border-gray-300 hover:bg-gray-50">
-              <td class="px-4 py-2">RHPO-1651244214</td>
-              <td class="px-4 py-2">Fidson Healthcare</td>
-              <td class="px-4 py-2">Trade</td>
-              <td class="px-4 py-2">5/21/2024</td>
-              <td class="px-4 py-2">₦2,055,043.00</td>
-              <td class="px-4 py-2">93</td>
-              <td class="px-4 py-2">1</td>
-              <td class="px-4 py-2">
+            <tr class="border-t bg-white border-gray-300 hover:bg-gray-50 [&>td]:py-2 [&>td]:px-4">
+              <td>RHPO-1651244214</td>
+              <td>Fidson Healthcare</td>
+              <td>Trade</td>
+              <td>5/21/2024</td>
+              <td>₦2,055,043.00</td>
+              <td>93</td>
+              <td>1</td> 
+              <td>
                 <span
                   class="bg-green-100 text-green-800 text-sm font-medium px-2 py-1 rounded"
                 >
                   Approved
                 </span>
               </td>
-              <td class="px-4 py-2">
+              <td>
                 <button class="text-gray-500 hover:text-gray-700">
                   <i class="bx bx-dots-vertical-rounded"></i>
                 </button>
               </td>
             </tr>
-            <tr class="border-t bg-white border-gray-300 hover:bg-gray-50">
-              <td class="px-4 py-2">RHPO-1651244211</td>
-              <td class="px-4 py-2">Fidson Healthcare</td>
-              <td class="px-4 py-2">Trade</td>
-              <td class="px-4 py-2">3/25/2024</td>
-              <td class="px-4 py-2">₦423,369.55</td>
-              <td class="px-4 py-2">120</td>
-              <td class="px-4 py-2">2</td>
-              <td class="px-4 py-2">
+            <tr
+              class="border-t bg-white border-gray-300 hover:bg-gray-50 [&>td]:px-4 [&>td]:py-2"
+            >
+              <td>RHPO-1651244211</td>
+              <td>Fidson Healthcare</td>
+              <td>Trade</td>
+              <td>3/25/2024</td>
+              <td>₦423,369.55</td>
+              <td>120</td>
+              <td>2</td>
+              <td>
                 <span
                   class="bg-green-100 text-green-800 text-sm font-medium px-2 py-1 rounded"
                 >
                   Approved
                 </span>
               </td>
-              <td class="px-4 py-2">
+              <td>
                 <button class="text-gray-500 hover:text-gray-700">
                   <i class="bx bx-dots-vertical-rounded"></i>
                 </button>
               </td>
             </tr>
-            <tr class="border-t bg-white border-gray-300 hover:bg-gray-50">
-              <td class="px-4 py-2">RHPO-1651244214</td>
-              <td class="px-4 py-2">Fidson Healthcare</td>
-              <td class="px-4 py-2">Trade</td>
-              <td class="px-4 py-2">5/21/2024</td>
-              <td class="px-4 py-2">₦2,055,043.00</td>
-              <td class="px-4 py-2">93</td>
-              <td class="px-4 py-2">1</td>
-              <td class="px-4 py-2">
+            <tr
+              class="border-t bg-white border-gray-300 hover:bg-gray-50 [&>td]:px-4 [&>td]:py-2"
+            >
+              <td>RHPO-1651244214</td>
+              <td>Fidson Healthcare</td>
+              <td>Trade</td>
+              <td>5/21/2024</td>
+              <td>₦2,055,043.00</td>
+              <td>93</td>
+              <td>1</td>
+              <td>
                 <span
                   class="bg-green-100 text-green-800 text-sm font-medium px-2 py-1 rounded"
                 >
                   Approved
                 </span>
               </td>
-              <td class="px-4 py-2">
+              <td>
                 <button class="text-gray-500 hover:text-gray-700">
                   <i class="bx bx-dots-vertical-rounded"></i>
                 </button>
               </td>
             </tr>
-            <tr class="border-t bg-white border-gray-300 hover:bg-gray-50">
-              <td class="px-4 py-2">RHPO-1651244211</td>
-              <td class="px-4 py-2">Fidson Healthcare</td>
-              <td class="px-4 py-2">Trade</td>
-              <td class="px-4 py-2">3/25/2024</td>
-              <td class="px-4 py-2">₦423,369.55</td>
-              <td class="px-4 py-2">120</td>
-              <td class="px-4 py-2">2</td>
-              <td class="px-4 py-2">
+            <tr
+              class="border-t bg-white border-gray-300 hover:bg-gray-50 [&>td]:px-4 [&>td]:py-2"
+            >
+              <td>RHPO-1651244211</td>
+              <td>Fidson Healthcare</td>
+              <td>Trade</td>
+              <td>3/25/2024</td>
+              <td>₦423,369.55</td>
+              <td>120</td>
+              <td>2</td>
+              <td>
                 <span
                   class="bg-green-100 text-green-800 text-sm font-medium px-2 py-1 rounded"
                 >
                   Approved
                 </span>
               </td>
-              <td class="px-4 py-2">
+              <td>
                 <button class="text-gray-500 hover:text-gray-700">
                   <i class="bx bx-dots-vertical-rounded"></i>
                 </button>
               </td>
             </tr>
-            <tr class="border-t bg-white border-gray-300 hover:bg-gray-50">
-              <td class="px-4 py-2">RHPO-1651244211</td>
-              <td class="px-4 py-2">Fidson Healthcare</td>
-              <td class="px-4 py-2">Trade</td>
-              <td class="px-4 py-2">3/25/2024</td>
-              <td class="px-4 py-2">₦423,369.55</td>
-              <td class="px-4 py-2">120</td>
-              <td class="px-4 py-2">2</td>
-              <td class="px-4 py-2">
+            <tr class="border-t bg-white border-gray-300 hover:bg-gray-50 [&>td]:px-4 [&>td]:py-2">
+              <td>RHPO-1651244211</td>
+              <td>Fidson Healthcare</td>
+              <td>Trade</td>
+              <td>3/25/2024</td>
+              <td>₦423,369.55</td>
+              <td>120</td>
+              <td>2</td>
+              <td>
                 <span
                   class="bg-green-100 text-green-800 text-sm font-medium px-2 py-1 rounded"
                 >
                   Approved
                 </span>
               </td>
-              <td class="px-4 py-2">
+              <td>
                 <button class="text-gray-500 hover:text-gray-700">
                   <i class="bx bx-dots-vertical-rounded"></i>
                 </button>
               </td>
             </tr>
-            <tr class="border-t bg-white border-gray-300 hover:bg-gray-50">
-              <td class="px-4 py-2">RHPO-1651244211</td>
-              <td class="px-4 py-2">Fidson Healthcare</td>
-              <td class="px-4 py-2">Trade</td>
-              <td class="px-4 py-2">3/25/2024</td>
-              <td class="px-4 py-2">₦423,369.55</td>
-              <td class="px-4 py-2">120</td>
-              <td class="px-4 py-2">2</td>
-              <td class="px-4 py-2">
+            <tr class="border-t bg-white border-gray-300 hover:bg-gray-50 [&>td]:px-4 [&>td]:py-2">
+              <td>RHPO-1651244211</td>
+              <td>Fidson Healthcare</td>
+              <td>Trade</td>
+              <td>3/25/2024</td>
+              <td>₦423,369.55</td>
+              <td>120</td>
+              <td>2</td>
+              <td>
                 <span
                   class="bg-green-100 text-green-800 text-sm font-medium px-2 py-1 rounded"
                 >
                   Approved
                 </span>
               </td>
-              <td class="px-4 py-2">
+              <td>
                 <button class="text-gray-500 hover:text-gray-700">
                   <i class="bx bx-dots-vertical-rounded"></i>
                 </button>
               </td>
             </tr>
-            <tr class="border-t bg-white border-gray-300 hover:bg-gray-50">
-              <td class="px-4 py-2">RHPO-1651244211</td>
-              <td class="px-4 py-2">Fidson Healthcare</td>
-              <td class="px-4 py-2">Trade</td>
-              <td class="px-4 py-2">3/25/2024</td>
-              <td class="px-4 py-2">₦423,369.55</td>
-              <td class="px-4 py-2">120</td>
-              <td class="px-4 py-2">2</td>
-              <td class="px-4 py-2">
+            <tr class="border-t bg-white border-gray-300 hover:bg-gray-50 [&>td]:px-4 [&>td]:py-2">
+              <td>RHPO-1651244211</td>
+              <td>Fidson Healthcare</td>
+              <td>Trade</td>
+              <td>3/25/2024</td>
+              <td>₦423,369.55</td>
+              <td>120</td>
+              <td>2</td>
+              <td>
                 <span
                   class="bg-green-100 text-green-800 text-sm font-medium px-2 py-1 rounded"
                 >
                   Confirm
                 </span>
               </td>
-              <td class="px-4 py-2">
+              <td>
                 <button class="text-gray-500 hover:text-gray-700">
                   <i class="bx bx-dots-vertical-rounded"></i>
                 </button>
@@ -406,8 +412,8 @@ export default {
   },
   methods: {
     navigateTo(route) {
-        console.log("back");
-        this.router.push(route);
+      console.log("back");
+      this.router.push(route);
     },
   },
 };
