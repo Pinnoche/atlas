@@ -41,25 +41,7 @@
           <!-- Main Stats Cards -->
           <div class="w-full md:col-span-9">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-              <div v-for="card in cards" :key="card.id">
-                <div class="card p-4 border border-gray-300 rounded-lg">
-                  <h3 class="text-gray-500 text-sm sm:text-base">{{ card.title }}</h3>
-                  <div class="space-y-4 mt-4">
-                    <p class="text-lg sm:text-xl font-semibold text-gray-600">
-                      {{ card.value }}
-                    </p>
-                    <p class="text-sm text-gray-600">
-                      <span
-                        class="px-2 py-1 font-bold rounded-md text-xs sm:text-sm"
-                        :class="card.color"
-                      >
-                        {{ card.percentage }}
-                      </span>
-                      {{ card.compared }}
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <Card v-for="(card, index) in cards" :key="index" :card="card" />
             </div>
 
             <!-- Analysis Section -->
@@ -194,9 +176,10 @@
 
 
 <script>
+import Card from "../components/card.vue";
 import Layout from "../Layout/Layout.vue";
 export default {
-  components: { Layout },
+  components: { Layout, Card },
   data() {
     return {
       headers: [
