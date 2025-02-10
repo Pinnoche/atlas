@@ -399,22 +399,16 @@
   </Layout>
 </template>
 
-<script>
+<script setup>
+// Using Composition Api Here
 import Layout from "../Layout/Layout.vue";
 import { useRouter } from "vue-router";
 
-export default {
-  components: { Layout },
-  name: "Supplier",
-  setup() {
-    const router = useRouter();
-    return { router };
-  },
-  methods: {
-    navigateTo(route) {
+const router = useRouter();
+
+    const navigateTo  = (route) => {
       console.log("back");
-      this.router.push(route);
-    },
-  },
-};
+      router.push(route);
+    };
+
 </script>
